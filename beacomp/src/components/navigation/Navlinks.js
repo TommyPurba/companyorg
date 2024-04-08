@@ -65,11 +65,11 @@ export const Navlinks = () => {
                       </p>
                       {mySubLinks.SubNavMenu && (
                         <div
-                          className={`${
-                            heading === mySubLinks.subName
-                              ? "md:hidden"
-                              : "hidden"
-                          }`}
+                        // className={`${
+                        //   heading === mySubLinks.subName
+                        //     ? "md:hidden"
+                        //     : "hidden"
+                        // }`}
                         >
                           <div className="">
                             <div className="bg-gray-400 p-3.5">
