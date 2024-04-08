@@ -50,9 +50,9 @@ export const Navlinks = () => {
             <div>
               <div className="absolute top-20 hidden group-hover:block hover:block">
                 <div className="py-3">
-                  <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45"></div>
+                  <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-500 rotate-45"></div>
                 </div>
-                <div className="bg-white p-3.5">
+                <div className="bg-bg-gray-500e p-3.5">
                   {links.sublink.map((mySubLinks) => (
                     <div>
                       <h6 className="text-lg hover:to-blue-950">
@@ -60,7 +60,7 @@ export const Navlinks = () => {
                       </h6>
                       {mySubLinks.SubNavMenu && (
                         <div>
-                          <div className="absolute right-20">
+                          <div className="absolute left-60">
                             <div className="py-3">
                               <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45"></div>
                             </div>
