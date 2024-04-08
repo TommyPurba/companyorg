@@ -58,7 +58,7 @@ export const Navlinks = () => {
                   {links.sublink.map((mySubLinks, index) => (
                     <div key={index}>
                       <p
-                        className="hover:text-white "
+                        className="hover:text-white"
                         onClick={() => setHeading(mySubLinks.subName)}
                       >
                         {mySubLinks.subName}
@@ -76,11 +76,11 @@ export const Navlinks = () => {
                               {mySubLinks.SubLinks.map((SubmenuLink, index) => (
                                 <div
                                   key={index}
-                                  className="text-sm text-gray-500 text-left"
+                                  className="text-sm text-gray-500 text-right"
                                 >
                                   <a
                                     key={index}
-                                    className="hover:text-indigo-300 m-2"
+                                    className="hover:text-indigo-300"
                                     href={SubmenuLink.link}
                                   >
                                     {SubmenuLink.Subhead}
