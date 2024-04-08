@@ -104,18 +104,18 @@ export const Navlinks = () => {
           {/* mobile */}
           <div>
             {link.submenu && (
-              <div
-                className={`${
-                  heading == mySubLinks.subName ? "md:hidden" : "hidden"
-                }`}
-              >
+              <div>
                 {link.sublink.map((sLinks, index) => (
                   <div key={index}>
                     <div>
                       <p className="py-4 pl-7 font-semibold md:pr-0 pr-5">
                         {sLinks.subName}
                         {sLinks.SubNavMenu && (
-                          <div>
+                          <div className={`${
+                            heading == sLinks.subName
+                              ? "md:block"
+                              : "hidden"
+                          }`}>
                             {sLinks.SubLinks.map((SubmobLink, index) => (
                               <div
                                 key={index}
