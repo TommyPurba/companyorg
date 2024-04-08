@@ -103,13 +103,37 @@ export const Navlinks = () => {
           </div>
           {/* mobile */}
           <div>
-            {link.sublink.map((sLinks, index) => (
+            {link.sublink.map((mySubLinks, index) => (
               <div key={index}>
-                <div>
-                  <p className="py-4 pl-7 font-semibold md:pr-0 pr-5">
-                    {sLinks.subName}
-                  </p>
-                </div>
+                <p
+                  className="hover:text-white"
+                  onClick={() => setHeading(mySubLinks.subName)}
+                >
+                  {mySubLinks.subName}
+                </p>
+                {mySubLinks.SubNavMenu && (
+                  <div>
+                    <div
+                      className={`${
+                        heading == mySubLinks.subName ? "md:block" : "hidden"
+                      }`}
+                    >
+                      <div>
+                        {mySubLinks.SubLinks.map((SubmenuLink, index) => (
+                          <div key={index} className="text-sm text-gray-500 ">
+                            <a
+                              key={index}
+                              className="hover:text-indigo-300"
+                              href={SubmenuLink.link}
+                            >
+                              {SubmenuLink.Subhead}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
