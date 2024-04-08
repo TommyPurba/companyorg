@@ -68,7 +68,7 @@ export const Navlinks = () => {
                           <div
                             className={`${
                               heading == mySubLinks.subName
-                                ? "md:hidden"
+                                ? ""
                                 : "hidden"
                             }`}
                           >
