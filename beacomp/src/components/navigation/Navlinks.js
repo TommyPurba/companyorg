@@ -16,21 +16,21 @@ export const Navlinks = () => {
           ],
         },
         {
-          subName: "Organisasi",
+          subName: "sadf",
           SubNavMenu: true,
           SubLinks: [
-            { Subhead: "test", link: "/test" },
-            { Subhead: "rest", link: "/rest" },
-            { Subhead: "best", link: "/best" },
+            { Subhead: "tedsast", link: "/test" },
+            { Subhead: "redsast", link: "/rest" },
+            { Subhead: "besdast", link: "/best" },
           ],
         },
         {
-          subName: "Organisasi",
+          subName: "tererere",
           SubNavMenu: true,
           SubLinks: [
-            { Subhead: "test", link: "/test" },
-            { Subhead: "rest", link: "/rest" },
-            { Subhead: "best", link: "/best" },
+            { Subhead: "tedsast", link: "/test" },
+            { Subhead: "redasst", link: "/rest" },
+            { Subhead: "bedasst", link: "/best" },
           ],
         },
       ],
@@ -43,8 +43,8 @@ export const Navlinks = () => {
 
   return (
     <>
-      {links.map((links) => (
-        <div className="px-3 text-left md:cursor-pointer group">
+      {links.map((links, index) => (
+        <div key={index} className="px-3 text-left md:cursor-pointer group">
           <h1 className="py-6">{links.name}</h1>
           {links.submenu && (
             <div>
@@ -53,8 +53,8 @@ export const Navlinks = () => {
                   <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-400 rotate-45"></div>
                 </div>
                 <div className="bg-gray-400 p-3.5">
-                  {links.sublink.map((mySubLinks) => (
-                    <div>
+                  {links.sublink.map((mySubLinks, index) => (
+                    <div key={index}>
                       <p className="hover:text-white m-2">
                         {mySubLinks.subName}
                       </p>
@@ -62,8 +62,11 @@ export const Navlinks = () => {
                         <div>
                           <div className="absolute left-10 ">
                             <div className="bg-gray-400 p-3.5">
-                              {mySubLinks.SubLinks.map((SubmenuLink) => (
-                                <div className="text-sm text-gray-500">
+                              {mySubLinks.SubLinks.map((SubmenuLink, index) => (
+                                <div
+                                  key={index}
+                                  className="text-sm text-gray-500"
+                                >
                                   <a
                                     className="hover:text-indigo-300 m-2"
                                     href={SubmenuLink.link}
