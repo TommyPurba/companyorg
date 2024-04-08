@@ -99,8 +99,8 @@ export const Navlinks = () => {
               </div>
             )}
           </div>
-
-          <div>
+          {/* mobile */}
+          {/* <div>
             {links.sublink.map((sLinks, index) => (
               <div>
                 <div>
@@ -108,7 +108,7 @@ export const Navlinks = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       ))}
     </>
