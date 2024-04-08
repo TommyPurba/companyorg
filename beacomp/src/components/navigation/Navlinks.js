@@ -51,7 +51,7 @@ export const Navlinks = () => {
             <h1 className="py-6">{links.name}</h1>
             {links.submenu && (
               <div className="">
-                <div className="absolute top-20 hidden group-hover:block hover:block">
+                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
                   <div className="py-3">
                     <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-400 rotate-45"></div>
                   </div>
