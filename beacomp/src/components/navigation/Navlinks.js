@@ -104,7 +104,11 @@ export const Navlinks = () => {
           {/* mobile */}
           <div>
             {link.submenu && (
-              <div>
+              <div
+                className={`${
+                  heading == mySubLinks.subName ? "md:hidden" : "hidden"
+                }`}
+              >
                 {link.sublink.map((sLinks, index) => (
                   <div key={index}>
                     <div>
