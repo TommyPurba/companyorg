@@ -1,47 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import links from "./myLinks";
+
 
 export const Navlinks = () => {
   const [heading, setHeading] = useState("");
-  const links = [
-    {
-      name: "Profile",
-      submenu: true,
-      sublink: [
-        {
-          subName: "Organisasi",
-          SubNavMenu: true,
-          SubLinks: [
-            { Subhead: "test", link: "/test" },
-            { Subhead: "rest", link: "/rest" },
-            { Subhead: "best", link: "/best" },
-          ],
-        },
-        {
-          subName: "sadf",
-          SubNavMenu: true,
-          SubLinks: [
-            { Subhead: "tedsast", link: "/test" },
-            { Subhead: "redsast", link: "/rest" },
-            { Subhead: "besdast", link: "/best" },
-          ],
-        },
-        {
-          subName: "tererere",
-          SubNavMenu: true,
-          SubLinks: [
-            { Subhead: "tedsast", link: "/test" },
-            { Subhead: "redasst", link: "/rest" },
-            { Subhead: "bedasst", link: "/best" },
-          ],
-        },
-      ],
-    },
-    { name: "Peraturan", href: "/Peraturan" },
-    { name: "PPID", href: "/PPID" },
-    { name: "Berita", href: "/Berita" },
-    { name: "Pengaduan", href: "/Pengaduan" },
-  ];
 
   return (
     <>
@@ -54,7 +17,7 @@ export const Navlinks = () => {
                 <div className="py-3">
                   <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-400 rotate-45"></div>
                 </div>
-                <div className="bg-gray-400 p-3.5 md:w-28">
+                <div className="bg-gray-400 p-3.5 md:w-32">
                   {links.sublink.map((mySubLinks, index) => (
                     <div key={index}>
                       <p
@@ -98,6 +61,8 @@ export const Navlinks = () => {
             </div>
           )}
         </div>
+
+        //  mobile
       ))}
     </>
   );
