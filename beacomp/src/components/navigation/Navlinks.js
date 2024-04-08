@@ -50,7 +50,7 @@ export const Navlinks = () => {
           <div key={index} className="px-3 text-left md:cursor-pointer group">
             <h1 className="py-6">{links.name}</h1>
             {links.submenu && (
-              <div className="md:hidden">
+              <div className="">
                 <div className="absolute top-20 hidden group-hover:block hover:block">
                   <div className="py-3">
                     <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-400 rotate-45"></div>
