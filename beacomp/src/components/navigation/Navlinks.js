@@ -60,7 +60,7 @@ export const Navlinks = () => {
                       </p>
                       {mySubLinks.SubNavMenu && (
                         <div>
-                          <div className="absolute left-10 p-10 ">
+                          <div className="absolute top-3 left-20">
                             <div className="bg-gray-400 p-3.5">
                               {mySubLinks.SubLinks.map((SubmenuLink, index) => (
                                 <div
