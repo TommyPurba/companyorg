@@ -3,6 +3,13 @@ import { useState } from "react";
 
 export const Navlinks = () => {
   const [heading, setHeading] = useState("");
+  const [subHeading, setSubHeading] = useState("");
+
+  // const handleClick =(event)=>{
+  //   setHeading(event.target.value);
+  //   subHeading(event.target.value);
+  // }
+
   const links = [
     {
       name: "Profile",
@@ -109,7 +116,7 @@ export const Navlinks = () => {
                   <div key={index}>
                     <div
                       className={`${
-                        heading == link.name ? "hidden" : "md:hidden"
+                        heading == sLinks.subName ? "hidden" : "md:"
                       }`}
                     >
                       <p className="py-4 pl-7 font-semibold md:pr-0 pr-5">
@@ -117,7 +124,7 @@ export const Navlinks = () => {
                         {sLinks.SubNavMenu && (
                           <div
                             className={`${
-                              heading == link.name ? "hidden" : "md:hidden"
+                              heading === sLinks.subName ? "hidden" : "md:"
                             }`}
                           >
                             {sLinks.SubLinks.map((SubmobLink, index) => (
