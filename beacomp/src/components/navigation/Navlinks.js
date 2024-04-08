@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export const Navlinks = () => {
   const links = [
@@ -15,38 +16,64 @@ export const Navlinks = () => {
         ],
       },
     },
-    { name: "Peraturan", href: "/Peraturan" },
+    {
+      name: "Peraturan",
+      submenu: true,
+      subNavlink: {
+        subName: "Organisasi",
+        SubNavMenu: true,
+        SubLinks: [
+          { Subhead: "test", link: "/test" },
+          { Subhead: "rest", link: "/rest" },
+          { Subhead: "best", link: "/best" },
+        ],
+      },
+    },
     { name: "PPID", href: "/PPID" },
-    { name: "Berita", href: "/Berita" },
+    {
+      name: "Berita",
+      submenu: true,
+      subNavlink: {
+        subName: "Organisasi",
+        SubNavMenu: true,
+        SubLinks: [
+          { Subhead: "test", link: "/test" },
+          { Subhead: "rest", link: "/rest" },
+          { Subhead: "best", link: "/best" },
+        ],
+      },
+    },
     { name: "Pengaduan", href: "/Pengaduan" },
   ];
 
   return (
     <>
-      {links.map((links) => (
-        <div className="px-3 text-left md:cursor-pointer">
-          <h1 className="py-6">{links.name}</h1>
-          {links.submenu && (
+      {links.map((link, index) => (
+        <div key={index} className="px-3 text-left md:cursor-pointer">
+          <h1 className="py-6">{link.name}</h1>
+          {link.submenu && (
             <div>
               <div>
                 <div>
-                  {links.subNavlink.map((mySubLinks) => (
-                    <div>
+                  {link.subNavlink.SubLinks.map((SubmenuLink, index) => (
+                    <div key={index}>
                       <h3 className="text-lg font-semibold">
-                        {mySubLinks.subName}
+                        {SubmenuLink.subName}
                       </h3>
-                      {mySubLinks.SubNavMenu && (
+                      {SubmenuLink.SubNavMenu && (
                         <div>
                           <div>
                             <div>
-                              {mySubLinks.SubLinks.map((SubmenuLink) => (
-                                <div className="text-sm text-gray-500 my-2.5 ">
-                                  <a
-                                    className="hover:text-indigo-300"
-                                    href={SubmenuLink.link}
-                                  >
-                                    {SubmenuLink.Subhead}
-                                  </a>
+                              {SubmenuLink.SubLinks.map((SubLink, index) => (
+                                <div
+                                  key={index}
+                                  className="text-sm text-gray-500 my-2.5 "
+                                >
+                                  <Link href={SubLink.link}>
+                                    <a className="hover:text-indigo-300">
+                                      {SubLink.Subhead}
+                                    </a>
+                                  </Link>
                                 </div>
                               ))}
                             </div>
@@ -58,6 +85,11 @@ export const Navlinks = () => {
                 </div>
               </div>
             </div>
+          )}
+          {!link.submenu && (
+            <Link href={link.href}>
+              <a className="hover:text-indigo-300">{link.name}</a>
+            </Link>
           )}
         </div>
       ))}
