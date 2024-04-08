@@ -51,11 +51,11 @@ export const Navlinks = () => {
             <h1 className="py-6">{links.name}</h1>
             {links.submenu && (
               <div>
-                <div className="absolute top-20 md:hidden group-hover:block hover:block">
+                <div className="absolute top-20 hidden group-hover:block hover:block">
                   <div className="py-3">
                     <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-400 rotate-45"></div>
                   </div>
-                  <div className="bg-gray-400 p-3.5 md:w-32 md:hidden">
+                  <div className="bg-gray-400 p-3.5 md:w-32">
                     {links.sublink.map((mySubLinks, index) => (
                       <div key={index}>
                         <p
@@ -99,7 +99,7 @@ export const Navlinks = () => {
               </div>
             )}
           </div>
-          {/* mobile */}
+{/* mobile */}
           {/* <div>
             {links.sublink.map((sLinks, index) => (
               <div>
