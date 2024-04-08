@@ -102,15 +102,17 @@ export const Navlinks = () => {
             )}
           </div>
           {/* mobile */}
-          {/* <div>
+          <div>
             {links.sublink.map((sLinks, index) => (
-              <div>
+              <div key={index}>
                 <div>
-                  <p className="py-4 pl-7 md:pr-0 pr-5">{sLinks.subName}</p>
+                  <p className="py-4 pl-7 font-semibold md:pr-0 pr-5">
+                    {sLinks.subName}
+                  </p>
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       ))}
     </>
