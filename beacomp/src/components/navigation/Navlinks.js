@@ -58,18 +58,19 @@ export const Navlinks = () => {
                   {links.sublink.map((mySubLinks, index) => (
                     <div key={index}>
                       <p
-                        className="hover:text-white m-2"
+                        className="hover:text-white "
                         onClick={() => setHeading(mySubLinks.subName)}
                       >
                         {mySubLinks.subName}
                       </p>
+                      {heading}
                       {mySubLinks.SubNavMenu && (
                         <div
-                        // className={`${
-                        //   heading === mySubLinks.subName
-                        //     ? "md:hidden"
-                        //     : "hidden"
-                        // }`}
+                          className={`${
+                            heading == mySubLinks.subName
+                              ? "md:hidden"
+                              : "hidden"
+                          }`}
                         >
                           <div className="">
                             <div className="bg-gray-400 p-3.5">
