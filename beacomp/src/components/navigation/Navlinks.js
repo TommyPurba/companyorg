@@ -54,7 +54,7 @@ export const Navlinks = () => {
                 <div className="py-3">
                   <div className="w-4 h-4 left-3 absolute mt-1 bg-gray-400 rotate-45"></div>
                 </div>
-                <div className="bg-gray-400 p-3.5 md:w-11">
+                <div className="bg-gray-400 p-3.5 md:w-22">
                   {links.sublink.map((mySubLinks, index) => (
                     <div key={index}>
                       <p
