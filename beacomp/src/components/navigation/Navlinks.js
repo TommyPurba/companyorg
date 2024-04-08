@@ -60,7 +60,7 @@ export const Navlinks = () => {
                       </p>
                       {mySubLinks.SubNavMenu && (
                         <div>
-                          <div className="absolute left-10 ">
+                          <div className="">
                             {/* <div className="py-3">
                               <div className="w-4 h-4 top-10 left-5 absolute mt-1 bg-white rotate-45"></div>
                             </div> */}
