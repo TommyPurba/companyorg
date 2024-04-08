@@ -111,23 +111,6 @@ export const Navlinks = () => {
                       <p className="py-4 pl-7 font-semibold md:pr-0 pr-5">
                         {sLinks.subName}
                       </p>
-                      {sLinks.SubNavMenu && (
-                        <div>
-                          <div>
-                            {sLinks.SubLinks.map((SubMobLink, index) => (
-                              <div key={index}>
-                                <a
-                                  key={index}
-                                  className="hover:text-indigo-300"
-                                  href={SubMobLink.link}
-                                >
-                                  {SubMobLink.Subhead}
-                                </a>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
                     </div>
                   </div>
                 ))}
