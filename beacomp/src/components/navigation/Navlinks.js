@@ -68,10 +68,12 @@ export const Navlinks = () => {
                           <div>
                             <div
                               className={`${
-                                heading == mySubLinks.subName ? "md:" : "hidden"
+                                heading == mySubLinks.subName
+                                  ? "hidden"
+                                  : "md:hidden"
                               }`}
                             >
-                              <div className="bg-gray-400 p-3.5">
+                              <div>
                                 {mySubLinks.SubLinks.map(
                                   (SubmenuLink, index) => (
                                     <div
