@@ -55,7 +55,7 @@ export const Navbar = () => {
           </div>
         </div>
 
-        <ul className="md:flex hidden uppercase items-center gap-8 text-sm ">
+        <ul className="md:flex hidden uppercase items-center gap-8 text-sm hover:to-blue-400 ">
           <li>
             <Link href="/" className="py-7 px-3 inline-block">
               Beranda
