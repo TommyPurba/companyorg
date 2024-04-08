@@ -5,7 +5,7 @@ export const Navlinks = () => {
     {
       name: "Profile",
       submenu: true,
-      sublink: {
+      subNavlink: {
         subName: "Organisasi",
         SubNavMenu: true,
         SubLinks: [
@@ -30,7 +30,7 @@ export const Navlinks = () => {
             <div>
               <div>
                 <div>
-                  {links.sublink.map((mySubLinks) => (
+                  {links.subNavlink.map((mySubLinks) => (
                     <div>
                       <h3 className="text-lg font-semibold">
                         {mySubLinks.subName}
