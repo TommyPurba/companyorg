@@ -71,7 +71,7 @@ export const Navlinks = () => {
                               : "hidden"
                           }`}
                         >
-                          <div className="absolute left-20">
+                          <div className="">
                             <div className="bg-gray-400 p-3.5">
                               {mySubLinks.SubLinks.map((SubmenuLink, index) => (
                                 <div
