@@ -55,7 +55,7 @@ export const Navlinks = () => {
                 <div className="bg-gray-400 p-3.5">
                   {links.sublink.map((mySubLinks) => (
                     <div>
-                      <p className="hover:text-blue-950 m-2">
+                      <p className="hover:text-white m-2">
                         {mySubLinks.subName}
                       </p>
                       {mySubLinks.SubNavMenu && (
