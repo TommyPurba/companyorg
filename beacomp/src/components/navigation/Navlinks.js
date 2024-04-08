@@ -116,7 +116,7 @@ export const Navlinks = () => {
                   <div key={index}>
                     <div
                       className={`${
-                        heading == sLinks.subName ? "md:hidden" : ""
+                        heading == sLinks.subName ? "md:block" : "hidden"
                       }`}
                     >
                       <p className="py-4 pl-7 font-semibold md:pr-0 pr-5">
