@@ -1,6 +1,7 @@
 import React from "react";
 
 export const Navlinks = () => {
+  const [heading, setHeading] = useState("");
   const links = [
     {
       name: "Profile",
@@ -55,12 +56,21 @@ export const Navlinks = () => {
                 <div className="bg-gray-400 p-3.5">
                   {links.sublink.map((mySubLinks, index) => (
                     <div key={index}>
-                      <p className="hover:text-white m-2">
+                      <p
+                        className="hover:text-white m-2"
+                        onClick={() => setHeading(mySubLinks.subName)}
+                      >
                         {mySubLinks.subName}
                       </p>
                       {mySubLinks.SubNavMenu && (
-                        <div>
-                          <div className="absolute top-3 left-20">
+                        <div
+                          className={`${
+                            heading === mySubLinks.subName
+                              ? "md:hidden"
+                              : "hidden"
+                          }`}
+                        >
+                          <div className="absolute top-10 left-20">
                             <div className="bg-gray-400 p-3.5">
                               {mySubLinks.SubLinks.map((SubmenuLink, index) => (
                                 <div
